@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Industrial – Daniel Santos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="projetos-page">
+
+    <header class="header">
+        <nav class="nav-container">
+            <h1 class="logo">Daniel Santos</h1>
+
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+
+                <li class="dropdown">
+                    <a class="dropbtn" class="active">Projetos ▾</a>
+
+                    <ul class="dropdown-content">
+                        <li><a href="projetos-residenciais.html">Projetos Residenciais</a></li>
+                        <li><a href="projetos-comerciais.html">Projetos Comerciais</a></li>
+                        <li><a href="design-industrial.html" class="active">Design Industrial</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="residenciais-container residenciais-dark">
+
+        <h2 class="residenciais-titulo">Design Industrial</h2>
+
+        <div class="residenciais-texto">
+            <p>
+                Sou especialista em design industrial de ambientes, criando espaços autênticos, funcionais 
+                e cheios de personalidade. Minha proposta valoriza materiais brutos — concreto, metal e madeira —
+                equilibrando estética urbana com conforto.
+            </p>
+
+            <p>
+                Transformo ambientes em experiências que traduzem estilo, identidade e propósito. O design
+                industrial celebra a verdade dos materiais: o que é bruto, real e imperfeito ganha protagonismo.
+            </p>
+
+            <p>
+                Tubulações aparentes, concreto cru, metais oxidados e madeira envelhecida revelam a estrutura
+                e a alma da arquitetura. Esse estilo transmite força, autenticidade e uma sofisticação 
+                despretensiosa que nasce do equilíbrio entre o rústico e o contemporâneo.
+            </p>
+
+            <p>
+                Mais do que um estilo, o design industrial é uma atitude estética — uma visão de mundo que
+                valoriza o processo, o trabalho manual, o tempo e a história dos espaços.
+            </p>
+        </div>
+
+        <div class="carousel">
+            <button class="prev" onclick="changeSlide(-1)">❮</button>
+
+            <div class="carousel-images">
+                <img src="img/ind1.png" class="active">
+                <img src="img/ind2.png">
+                <img src="img/ind3.png">
+            </div>
+
+            <button class="next" onclick="changeSlide(1)">❯</button>
+        </div>
+
+           <a href="contato.html" class="btn-orcamento">Solicitar Orçamento</a>
+     
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".carousel-images img");
+
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove("active");
+
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+
+            slides[currentSlide].classList.add("active");
+        }
+    </script>
+
+<footer class="footer">
+    <h2>Equipe de Desenvolvimento</h2>
+
+    <div class="equipe-container">
+        <div class="equipe-card">
+            <h3>Lucas Moreira</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>João Lucas</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Weslly Santos</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Livio Rocha</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Ashilley Barros</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Waldemar Neto</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

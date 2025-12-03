@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contato – Daniel Santos</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav-container">
+      <h1 class="logo">Daniel Santos</h1>
+
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+
+        <li class="dropdown">
+          <a class="dropbtn">Projetos ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="projetos-residenciais.html">Projetos Residenciais</a></li>
+            <li><a href="projetos-comerciais.html">Projetos Comerciais</a></li>
+            <li><a href="design-industrial.html">Design Industrial</a></li>
+          </ul>
+        </li>
+
+        <li><a href="contato.html" class="active">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contato-container">
+    <h2 class="contato-titulo">Vamos fazer seu projeto?</h2>
+
+    <p class="contato-intro">
+      Me envie uma mensagem com sua ideia e eu respondo com o orçamento.
+    </p>
+
+    <div class="contato-grid">
+
+      <form id="contatoForm" class="contato-form" onsubmit="return handleSubmit(event)">
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" type="text" placeholder="Seu nome" required>
+
+        <label for="email">E‑mail</label>
+        <input id="email" name="email" type="email" placeholder="seu@exemplo.com" required>
+
+        <label for="telefone">Telefone</label>
+        <input id="telefone" name="telefone" type="tel" placeholder="(83) 9xxxx-xxxx">
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="6" placeholder="Conte sobre o seu projeto..." required></textarea>
+
+        <button type="submit" class="btn-primary">Enviar mensagem</button>
+      </form>
+
+      <aside class="contato-info">
+        <div class="info-card">
+          <h3>Contato direto</h3>
+          <p>Telefone: (83) 99602-6060</p>
+          <p>E‑mail: danlincon85@gmail.com</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Local</h3>
+          <p>João Pessoa, PB — Atendimentos por agendamento</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Horário</h3>
+          <p>A combinar</p>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+
+    if (!nome || !email || !mensagem) {
+      alert('Por favor, preencha nome, e‑mail e mensagem.');
+      return false;
+    }
+
+    const subject = encodeURIComponent('Orçamento - ' + nome);
+    const body = encodeURIComponent(
+      `Nome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\n\nMensagem:\n${mensagem}`
+    );
+
+    const to = 'danlincon85@gmail.com';
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+
+    return false;
+  }
+</script>
+
+<footer class="footer">
+    <h2>Equipe de Desenvolvimento</h2>
+
+    <div class="equipe-container">
+        <div class="equipe-card">
+            <h3>Lucas Moreira</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>João Lucas</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Weslly Santos</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Livio Rocha</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Ashilley Barros</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Waldemar Neto</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

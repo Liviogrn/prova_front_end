@@ -61,10 +61,50 @@
 
     footer{
         margin-top:10px;
-        text-align:center;
-        padding:20px;
-        background:#333;
-        color:#fff;
+        background:#111;
+        color:#f5f2ee;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    footer h2 {
+        font-size: 28px;
+        margin-bottom: 35px;
+        font-weight: 600;
+    }
+
+    .equipe-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 26px;
+    }
+
+    .equipe-card {
+        background-color: #1c1c1c;
+        padding: 22px 26px;
+        border-radius: 12px;
+        width: 220px;
+        text-align: center;
+        box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+        transition: 0.25s ease;
+    }
+
+    .equipe-card:hover {
+        transform: translateY(-6px);
+        background-color: #c8a300;
+        color: #000;
+    }
+
+    .equipe-card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    .equipe-card p {
+        font-size: 14px;
+        opacity: 0.8;
     }
 </style>
 
@@ -76,10 +116,10 @@
 </header>
 
 <section class="menu">
-    <a href="portfolio1.html" target="_blank">Portfólio 1</a>
-    <a href="portfolio2.html" target="_blank">Portfólio 2</a>
-    <a href="portfolio3.html" target="_blank">Portfólio 3</a>
-    <a href="portfolio4.html" target="_blank">Portfólio 4</a>
+    <a href="portfolio_1/portfolio1.html" target="_blank">Portfólio 1</a>
+    <a href="portfolio_2/portfolio2.html" target="_blank">Portfólio 2</a>
+    <a href="portfolio_3/index.html" target="_blank">Portfólio 3</a>
+    <a href="portfolio_4/index.html" target="_blank">Portfólio 4</a>
 </section>
 
 <div class="descricao">
@@ -87,8 +127,40 @@
     aplicando conhecimentos práticos de HTML, CSS, design visual e construção de interfaces modernas.
 </div>
 
-<footer>
-    Desenvolvido por alunos do curso de Sistemas para Internet.
+<footer class="footer">
+    <h2>Equipe de Desenvolvimento</h2>
+
+    <div class="equipe-container">
+        <div class="equipe-card">
+            <h3>Lucas Moreira</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>João Lucas</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Weslly Santos</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Livio Rocha</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Ashilley Barros</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Waldemar Neto</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+    </div>
 </footer>
 
 </body>

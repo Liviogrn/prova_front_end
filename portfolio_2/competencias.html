@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competências</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { box-sizing: border-box; }
+        img, video, iframe { max-width: 100%; height: auto; display: block; }
+        html, body { margin: 0; padding: 0; }
+        .site-wrap, .wrap, .wrapper, .container, main { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+        @media (min-width: 600px) { .site-wrap, .wrap, .wrapper, .container, main { padding: 0 24px; } }
+        :root{
+            --bg:#fbf6f2;
+            --muted:#9a9b9b;
+            --dark:#262626;
+            --accent:#bdbdbd;
+            --max-width:1180px;
+        }
+
+        *{box-sizing:border-box}
+        html,body{
+            height:100%;
+            margin:0;
+            font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background:var(--bg);
+            color:var(--dark);
+        }
+
+        .wrapper{
+            max-width:var(--max-width);
+            margin:40px auto;
+            display:grid;
+            grid-template-columns: 1fr 420px;
+            gap:48px;
+            align-items:start;
+            padding:20px;
+            min-height:70vh;
+        }
+
+        .left-column{
+            position:relative;
+            padding-left:40px;
+        }
+
+        .left-column h1{
+            position:relative;
+            z-index:5;
+            font-weight:300;
+            text-transform:uppercase;
+            font-size:64px;
+            letter-spacing:6px;
+            margin:0 0 18px 0;
+        }
+
+        .left-column::before{
+            content:"";
+            position:absolute;
+            left:0;
+            top:160px;
+            width:200px;
+            height:420px;
+            background:var(--accent);
+            z-index:0;
+        }
+
+        .image-wrapper{
+            width:520px;
+            height:520px;
+            background:#fff;
+            box-shadow: 0 4px 0 rgba(0,0,0,0.06);
+            overflow:hidden;
+            display:block;
+            margin-top:12px;
+            margin-left:120px;
+            z-index:2;
+            position:relative;
+        }
+
+        .image-wrapper img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            object-position:50% 12%;
+            display:block;
+        }
+
+        .right-column{
+            position:relative;
+            padding:24px 28px;
+        }
+
+        .small-square{
+            width:180px;
+            height:160px;
+            background:var(--accent);
+            margin-left:auto;
+            margin-bottom:28px;
+        }
+
+        .right-column ul{
+            list-style:none;
+            padding:0;
+            margin:0;
+        }
+
+        .right-column li{
+            margin-bottom:28px;
+            padding-left:12px;
+            position:relative;
+        }
+
+        .right-column li::before{
+            content:"•";
+            position:absolute;
+            left:0;
+            top:0;
+            color:var(--dark);
+            font-size:20px;
+            line-height:1;
+        }
+
+        .right-column li > p{
+            margin:8px 0 0 0;
+            color:#6b6b6b;
+            font-size:15px;
+            line-height:1.9;
+            max-width:320px;
+            font-weight:400; 
+        }
+
+        .right-column li:first-child,
+        .right-column li:nth-child(2){
+            font-weight:600;
+            font-size:18px;
+            margin-bottom:6px;
+        }
+
+        .right-column li:nth-child(2) > p{
+            margin-top:18px;
+        }
+
+        @media (max-width:1000px){
+            .wrapper{
+                grid-template-columns: 1fr 360px;
+                gap:28px;
+                padding:18px;
+            }
+
+            .image-wrapper{
+                width:420px;
+                height:420px;
+                margin-left:80px;
+            }
+
+            .left-column::before{
+                width:140px;
+                height:360px;
+                top:140px; 
+            }
+        }
+
+        @media (max-width:760px){
+            .wrapper{
+                grid-template-columns:1fr;
+                gap:18px;
+                padding:16px;
+            }
+
+            .left-column{
+                padding-left:0;
+            }
+
+            .left-column h1{
+                font-size:36px;
+                letter-spacing:3px;
+            }
+
+            .left-column::before{
+                display:none;
+            }
+
+            .image-wrapper{
+                width:90%;
+                height: auto;
+                aspect-ratio:1/1;
+                margin:18px auto 6px;
+            }
+
+            .right-column{
+                padding:12px;
+            }
+
+            .small-square{
+                width:120px;
+                height:120px;
+                margin:0 0 18px auto;
+            }
+
+            .right-column li > p{
+                max-width:100%;
+            }
+
+            .right-column li:nth-child(2) > p{
+                margin-top:12px;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="wrapper">
+        <section class="left-column">
+            <h1>Minhas competências</h1>
+            <div class="image-wrapper">
+                <img src="assets/rafael-02.JPEG" alt="Imagem Rafael Almeida">
+            </div>
+        </section>
+
+        <aside class="right-column">
+            <div class="small-square" aria-hidden="true"></div>
+            <ul>
+                <li>
+                    Colaboração
+                    <p>Capacidade de saber trabalhar em equipe, discutir ideias, ter empatia e estar aberto para trocar conhecimento e experiência.</p>
+                </li>
+
+                <li>
+                    Flexibilidade
+                    <p>Pronto para desafios e preparado para mudanças.</p>
+                </li>
+            </ul>
+        </aside>
+    </main>
+</body>
+</html>

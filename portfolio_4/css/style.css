@@ -1,0 +1,629 @@
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background:#F5E6D3;
+    color:#3D2817;
+}
+
+/* NAVBAR */
+.navbar {
+    position:fixed;
+    top:0; left:0; right:0;
+    background:#8B6F47;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 18px rgba(0,0,0,0.1);
+    z-index:1000;
+}
+
+.logo {
+    font-weight:700;
+    font-size:20px;
+    color:#FFFFFF;
+}
+
+.nav-links {
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a {
+    text-decoration:none;
+    color:#FFFFFF;
+    font-weight:600;
+    transition:color 0.3s ease;
+    position:relative;
+}
+
+.nav-links a::after {
+    content:'';
+    position:absolute;
+    bottom:-5px;
+    left:0;
+    width:0;
+    height:2px;
+    background:#D4A574;
+    transition:width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width:100%;
+}
+
+.nav-links a:hover {
+    color:#D4A574;
+}
+
+.hamburger {
+    display:none;
+    background:none;
+    border:0;
+    cursor:pointer;
+}
+
+.hamburger span {
+    display:block;
+    width:28px;
+    height:3px;
+    margin:5px 0;
+    background:#FFFFFF;
+    border-radius:3px;
+    transition:all 0.3s ease;
+}
+
+/* HERO */
+.hero {
+    padding:100px 20px 80px;
+    text-align:center;
+    background:#A0845F;
+    position:relative;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero h1 {
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:10px;
+    color:#FFFFFF;
+    text-shadow:2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size:18px;
+    color:#FFFFFF;
+    margin-bottom:0;
+}
+
+/* SESSÕES */
+.secao {
+    margin:0 auto;
+    width:90%;
+    max-width:1100px;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.secao h2 {
+    font-size:32px;
+    margin-bottom:40px;
+    color:#3D2817;
+    position:relative;
+    padding-bottom:20px;
+}
+
+.secao h2::after {
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:80px;
+    height:4px;
+    background:#D4A574;
+    border-radius:2px;
+}
+
+/* SOBRE */
+.sobre-container {
+    text-align:left;
+    background:#E8D9C5;
+    padding:60px 20px;
+    margin:0;
+    width:100%;
+    box-shadow:inset 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.sobre-conteudo {
+    display:flex;
+    align-items:flex-start;
+    gap:40px;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+.sobre-img {
+    width:220px;
+    height:220px;
+    flex-shrink:0;
+    overflow:hidden;
+    border-radius:18px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+}
+
+.sobre-img img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.sobre-texto {
+    flex:1;
+    min-width:250px;
+}
+
+.sobre-texto p {
+    margin-bottom:15px;
+    line-height:1.6;
+    color:#3D2817;
+}
+
+.sobre-habilidades {
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    flex:0 0 300px;
+}
+
+.habilidade-box {
+    background:#FFFFFF;
+    padding:20px;
+    border-radius:12px;
+    border-left:5px solid #D4A574;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.habilidade-box h3 {
+    font-size:16px;
+    color:#3D2817;
+    margin-bottom:15px;
+    font-family:"Playfair Display", serif;
+    font-weight:700;
+}
+
+.software-item {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+    padding-bottom:8px;
+    border-bottom:1px solid #f0f0f0;
+}
+
+.software-item span {
+    color:#3D2817;
+    font-weight:500;
+}
+
+.stars {
+    color:#D4A574;
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+.habilidade-box ul {
+    list-style:none;
+}
+
+.habilidade-box li {
+    color:#3D2817;
+    margin-bottom:10px;
+    padding-left:20px;
+    position:relative;
+    font-size:14px;
+}
+
+.habilidade-box li::before {
+    content:'✦';
+    position:absolute;
+    left:0;
+    color:#D4A574;
+    font-size:12px;
+}
+
+.formacao-box {
+    background:linear-gradient(135deg, #E8D9C5 0%, #D9C8B3 100%);
+    border:2px solid #D4A574;
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.formacao-box p {
+    color:#3D2817;
+    font-weight:600;
+    font-size:14px;
+    font-family:"Playfair Display", serif;
+    margin:0;
+}
+
+/* GALERIA */
+#portfolio {
+    background:#E31C23;
+}
+
+#croche, #Lemos, #lumen {
+    background:#F5E6D3;
+    margin:0 auto;
+    width:100%;
+    text-align:center;
+    padding:60px 20px;
+    border-top:4px solid;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* Estilos específicos para Mary Crochê */
+#croche {
+    background:linear-gradient(135deg, #FFF5F7 0%, #FFE5EB 100%);
+}
+
+#croche h2 {
+    color:#E31C23;
+}
+
+#croche .portfolio-intro {
+    color:#D63A43;
+}
+
+#croche .card {
+    background:linear-gradient(135deg, #FFFFFF 0%, #FFF5F7 100%);
+    border-left:5px solid #E31C23;
+}
+
+#croche .card-body {
+    border-top:3px solid #F5A8AC;
+}
+
+#croche .card-body h3 {
+    color:#E31C23;
+}
+
+#croche h2, #Lemos h2, #lumen h2 {
+    width:90%;
+    max-width:1100px;
+}
+
+#croche .card, #Lemos .card, #lumen .card {
+    margin:0 auto;
+}
+
+#croche {
+    border-top-image:linear-gradient(90deg, #E31C23 0%, #F5A8AC 50%, #E31C23 100%) 1;
+    border-image:linear-gradient(90deg, #E31C23 0%, #F5A8AC 50%, #E31C23 100%) 1;
+}
+
+#Lemos {
+    border-top-image:linear-gradient(90deg, #FF9FB3 0%, #FFC0D0 50%, #FF9FB3 100%) 1;
+    border-image:linear-gradient(90deg, #FF9FB3 0%, #FFC0D0 50%, #FF9FB3 100%) 1;
+}
+
+#lumen {
+    border-top-image:linear-gradient(90deg, #10213A 0%, #2E4A6A 50%, #10213A 100%) 1;
+    border-image:linear-gradient(90deg, #10213A 0%, #2E4A6A 50%, #10213A 100%) 1;
+}
+
+#croche h2, #Lemos h2, #lumen h2 {
+    font-size:32px;
+    margin-bottom:40px;
+    color:#3D2817;
+    position:relative;
+    padding-bottom:20px;
+}
+
+.portfolio-intro {
+    font-size:16px;
+    color:#5A4A3A;
+    line-height:1.8;
+    max-width:800px;
+    margin:0 auto 40px;
+    font-style:italic;
+    font-weight:300;
+}
+
+#croche h2::after {
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:80px;
+    height:4px;
+    background:linear-gradient(90deg, #E31C23 0%, #F5A8AC 50%, #E31C23 100%);
+    border-radius:2px;
+}
+
+#Lemos h2::after {
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:80px;
+    height:4px;
+    background:linear-gradient(90deg, #FF9FB3 0%, #FFC0D0 50%, #FF9FB3 100%);
+    border-radius:2px;
+}
+
+#lumen h2::after {
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:80px;
+    height:4px;
+    background:linear-gradient(90deg, #10213A 0%, #2E4A6A 50%, #10213A 100%);
+    border-radius:2px;
+}
+
+/* Estilos específicos para Marianna Lemos */
+#Lemos {
+    background:linear-gradient(135deg, #FFF5F9 0%, #FFE8F2 100%);
+}
+
+#Lemos h2 {
+    color:#FF9FB3;
+}
+
+#Lemos .portfolio-intro {
+    color:#E87399;
+}
+
+#Lemos .card {
+    background:linear-gradient(135deg, #FFFFFF 0%, #FFF5F9 100%);
+    border-left:5px solid #FF9FB3;
+}
+
+#Lemos .card-body {
+    border-top:3px solid #FFC0D0;
+}
+
+#Lemos .card-body h3 {
+    color:#FF9FB3;
+}
+
+/* Estilos específicos para Lumen */
+#lumen {
+    background:linear-gradient(135deg, #F0F4F9 0%, #E5EEF7 100%);
+}
+
+#lumen h2 {
+    color:#10213A;
+}
+
+#lumen .portfolio-intro {
+    color:#2E4A6A;
+}
+
+#lumen .card {
+    background:linear-gradient(135deg, #FFFFFF 0%, #F0F4F9 100%);
+    border-left:5px solid #10213A;
+}
+
+#lumen .card-body {
+    border-top:3px solid #2E4A6A;
+}
+
+#lumen .card-body h3 {
+    color:#10213A;
+}
+
+.galeria {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:40px;
+}
+
+.card {
+    width:300px;
+    background:#FFFFFF;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-wrap {
+    width:100%;
+    height:180px;
+    overflow:hidden;
+}
+
+.img-wrap img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.card-body {
+    padding:20px 16px;
+    color:#3D2817;
+    text-align:center;
+    cursor:pointer;
+    position:relative;
+}
+
+.card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* Portfolio Card Slidedown */
+.portfolio-card {
+    cursor:pointer;
+}
+
+.portfolio-card .img-wrap.clickable-image {
+    cursor:pointer;
+    transition:opacity 0.3s ease;
+}
+
+.portfolio-card .img-wrap.clickable-image:hover {
+    opacity:0.8;
+}
+
+.portfolio-card .card-body::after {
+    content:'▼';
+    position:absolute;
+    right:15px;
+    transition:transform 0.3s ease;
+    display:inline-block;
+    margin-left:10px;
+}
+
+.portfolio-card.active .card-body::after {
+    transform:rotate(180deg);
+}
+
+.card-details {
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
+    background:#f9f9f9;
+}
+
+.portfolio-card.active .card-details {
+    max-height:400px;
+}
+
+.colors-wrapper {
+    padding:20px;
+}
+
+.colors-wrapper h4 {
+    color:#3D2817;
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:15px;
+    text-align:center;
+    font-family:"Playfair Display", serif;
+}
+
+.colors-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:15px;
+}
+
+.color-item {
+    text-align:center;
+}
+
+.color-box {
+    width:100%;
+    height:60px;
+    border-radius:8px;
+    margin-bottom:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.color-code {
+    display:block;
+    font-size:11px;
+    color:#3D2817;
+    font-weight:600;
+    font-family:monospace;
+    margin-bottom:4px;
+}
+
+.color-name {
+    display:block;
+    font-size:10px;
+    color:#666;
+    font-style:italic;
+}
+
+.titulo-mary { color:#8c4bb0; font-family:"Fredoka", sans-serif; }
+.titulo-marianna { color:#ff9fb3; font-family:"Playfair Display", serif; }
+.titulo-lumen { color:#10213a; }
+
+/* BOTÃO */
+.btn {
+    background:#A0845F;
+    color:#FFFFFF;
+    padding:10px 18px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:700;
+    transition:background 0.3s ease;
+}
+
+.btn:hover {
+    background:#8B6F47;
+}
+
+/* FOOTER */
+footer {
+    text-align:center;
+    background:#8B6F47;
+    color:#FFFFFF;
+    padding:22px;
+    margin-top:40px;
+}
+
+/* RESPONSIVO */
+@media (max-width:768px){
+    .hamburger{display:block;}
+    .nav-links{ 
+        display:none; 
+        position:absolute; 
+        top:70px; 
+        right:0; 
+        background:#8B6F47; 
+        flex-direction:column; 
+        padding:20px 30px; 
+        width:100%;
+        border-bottom:2px solid #D4A574;
+    }
+    .nav-links.show{ display:flex; }
+    .nav-links a {
+        color:#FFFFFF;
+        padding:10px 0;
+    }
+    .card{ width:90%; }
+    .sobre-conteudo{ 
+        flex-direction:column; 
+        gap:20px;
+        align-items:center;
+    }
+    .sobre-img{ 
+        width:180px; 
+        height:180px; 
+    }
+    .sobre-texto{ 
+        text-align:center;
+        flex:none;
+        width:100%;
+    }
+    .sobre-habilidades {
+        flex-direction:column;
+        width:100%;
+        flex:none;
+    }
+    .hero h1{ font-size:32px; }
+    .secao h2{ font-size:24px; }
+}
+    .sobre-texto{ text-align:center; }
+    .hero h1{ font-size:32px; }
+    .secao h2{ font-size:24px; }
+}
+
+

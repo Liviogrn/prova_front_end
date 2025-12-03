@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propósito - Rafael Frade</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    * { box-sizing: border-box; }
+    img, video, iframe { max-width: 100%; height: auto; display: block; }
+    html, body { margin: 0; padding: 0; }
+    .site-wrap, .wrap, .wrapper, .container, main { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    @media (min-width: 600px) { .site-wrap, .wrap, .wrapper, .container, main { padding: 0 24px; } }
+
+    body{
+        margin:0;
+        background:#f8f4ef; 
+        font-family:'Montserrat', sans-serif;
+    }
+
+    .container{
+        display:grid;
+        grid-template-columns: 260px 1fr 450px;
+        min-height:100vh;
+        max-width:1500px;
+        margin:auto;
+    }
+
+    .col-esq{
+        position:relative;
+    }
+
+    .quad-esq{
+        width:278px;
+        height:400px;
+        background:#9ea3a6;
+        position:absolute;
+        left:60px;
+        bottom:120px;
+    }
+
+    .foto{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .foto img{
+        height:100vh;
+        width:auto;
+        object-fit:cover;
+    }
+
+    .col-dir{
+        padding:120px 70px;
+        position:relative;
+    }
+
+    .quad-dir-top{
+        width:260px;
+        height:230px;
+        background:#7a7f82;
+        position:absolute;
+        top:0;
+        right:70px;
+        transform:translateY(-60px);
+    }
+
+    .titulo{
+        font-size:52px;
+        font-weight:600;
+        margin-top:100px;
+        letter-spacing:3px;
+    }
+
+    .texto{
+        margin-top:30px;
+        font-size:18px;
+        line-height:1.7;
+        text-align:justify;
+        max-width:450px;
+    }
+
+    @media(max-width:1050px){
+        .container{
+            grid-template-columns:1fr;
+            padding:20px;
+        }
+
+        .foto img{
+            width:100%;
+            height:420px;
+        }
+
+        .quad-esq,
+        .quad-dir-top{
+            display:none;
+        }
+
+        .col-dir{
+            padding:40px 20px;
+        }
+    }
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="col-esq">
+        <div class="quad-esq"></div>
+    </div>
+
+    <div class="foto">
+        <img src="assets/rafael-03.JPEG" alt="Rafael Frade">
+    </div>
+
+    <div class="col-dir">
+
+        <div class="quad-dir-top"></div>
+
+        <h1 class="titulo">PROPÓSITO</h1>
+
+        <p class="texto">
+            Meu propósito é transformar ideias e sentimentos em soluções de design claras, funcionais e significativas.
+            Busco criar projetos que conectam pessoas e valores, traduzindo necessidades em forma, estética e propósito.
+            Minha motivação é dar vida ao que importa, oferecendo experiências visuais que geram impacto real.
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre – Daniel Santos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav-container">
+            <h1 class="logo">Daniel Santos</h1>
+
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html" class="active">Sobre</a></li>
+
+                <li class="dropdown">
+                    <a class="dropbtn">Projetos ▾</a>
+
+                    <ul class="dropdown-content">
+                        <li><a href="projetos-residenciais.html">Projetos Residenciais</a></li>
+                        <li><a href="projetos-comerciais.html">Projetos Comerciais</a></li>
+                        <li><a href="design-industrial.html">Design Industrial</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="sobre-container">
+        
+        <div class="sobre-content">
+
+            <div class="sobre-texto">
+                <h2>Sobre mim</h2>
+
+                <p class="sobre-frase">
+                    Sou design de interiores apaixonado por transformar espaços em experiências únicas.
+                </p>
+
+                <p>
+                    Sou especialista em criar ambientes que unem funcionalidade, estética e identidade,
+                    traduzindo a personalidade de cada cliente em cada detalhe do projeto.
+                </p>
+
+                <p>
+                    Com uma visão contemporânea e sensibilidade estética, atuo desde o conceito criativo
+                    até a execução final.
+                </p>
+
+                <h3>Meu trabalho envolve:</h3>
+
+                <ul class="sobre-lista">
+                    <li>Criação de layouts inteligentes e personalizados</li>
+                    <li>Escolha de materiais, cores, texturas e mobiliários</li>
+                    <li>Acompanhamento de obras e gestão de fornecedores</li>
+                    <li>Desenvolvimento de maquetes eletrônicas e moodboards</li>
+                    <li>Projetos residenciais, comerciais e corporativos</li>
+                </ul>
+            </div>
+
+            <div class="sobre-imagem">
+                <img src="img/daniel.png" alt="Foto de Daniel Santos">
+            </div>
+
+        </div>
+
+        <div class="missao-box">
+                <button class="missao-btn" onclick="toggleMissao()">MISSÃO</button>
+
+                <div class="missao-conteudo" id="missaoConteudo">
+                    <p><strong>Transformar espaços em experiências significativas</strong>, unindo estética, funcionalidade e bem-estar.</p>
+                    <br>
+                    <p>Meu propósito é interpretar a identidade e as necessidades das pessoas ou marcas, criando ambientes que inspirem, acolham e expressem emoções, sempre com criatividade, técnica e sensibilidade.</p>
+                    <br>
+                    <p><strong>Busco dar forma ao invisível</strong>, traduzindo sonhos, histórias e propósitos em espaços que conectam pessoas e sentimentos.</p>
+           </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+    <h2>Equipe de Desenvolvimento</h2>
+
+    <div class="equipe-container">
+        <div class="equipe-card">
+            <h3>Lucas Moreira</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>João Lucas</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Weslly Santos</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Livio Rocha</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Ashilley Barros</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Waldemar Neto</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+function toggleMissao() {
+    var box = document.getElementById("missaoConteudo");
+
+    if (box.style.display === "block") {
+        box.style.display = "none";
+    } else {
+        box.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>

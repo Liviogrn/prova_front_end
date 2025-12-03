@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Comerciais – Daniel Santos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="projetos-page">
+
+    <header class="header">
+        <nav class="nav-container">
+            <h1 class="logo">Daniel Santos</h1>
+
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+
+                <li class="dropdown">
+                    <a class="dropbtn" class="active">Projetos ▾</a>
+
+                    <ul class="dropdown-content">
+                        <li><a href="projetos-residenciais.html">Projetos Residenciais</a></li>
+                        <li><a href="projetos-comerciais.html" class="active">Projetos Comerciais</a></li>
+                        <li><a href="design-industrial.html">Design Industrial</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="residenciais-container">
+
+        <h2 class="residenciais-titulo">Projetos Comerciais</h2>
+
+        <div class="residenciais-texto">
+            <p>
+                Um projeto comercial é a fusão entre estratégia, estética e experiência — muito além de desenhar
+                um espaço físico, ele materializa a marca, seus valores e a forma como ela deseja ser percebida.
+            </p>
+
+            <p>
+                Cada elemento, do layout à iluminação, funciona como comunicação silenciosa. A atmosfera criada
+                transmite identidade, ativa sensações e influencia percepções, estimulando conexão entre pessoas
+                e produtos.
+            </p>
+
+            <p>
+                Nesse contexto, o espaço comercial torna-se extensão do DNA da marca. Texturas, curvas e cores
+                carregam intenções claras: acolher, inspirar confiança, surpreender ou impulsionar o consumo.
+            </p>
+
+            <p>
+                Um bom projeto comercial não apenas vende — ele encanta, comunica e pertence. É a arquitetura do
+                propósito e o design do relacionamento entre marca e público.
+            </p>
+        </div>
+
+        <div class="carousel">
+            <button class="prev" onclick="changeSlide(-1)">❮</button>
+
+            <div class="carousel-images">
+                <img src="img/foto1.png" class="active">
+                <img src="img/foto2.png">
+                <img src="img/foto3.png">
+            </div>
+
+            <button class="next" onclick="changeSlide(1)">❯</button>
+        </div>
+
+        <a href="contato.html" class="btn-orcamento">Solicitar Orçamento</a>
+        
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".carousel-images img");
+
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove("active");
+
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+
+            slides[currentSlide].classList.add("active");
+        }
+    </script>
+
+<footer class="footer">
+    <h2>Equipe de Desenvolvimento</h2>
+
+    <div class="equipe-container">
+        <div class="equipe-card">
+            <h3>Lucas Moreira</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>João Lucas</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Weslly Santos</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Livio Rocha</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Ashilley Barros</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Waldemar Neto</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

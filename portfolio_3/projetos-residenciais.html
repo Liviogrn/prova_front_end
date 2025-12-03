@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos Residenciais – Daniel Santos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="projetos-page">
+
+    <header class="header">
+        <nav class="nav-container">
+            <h1 class="logo">Daniel Santos</h1>
+
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+
+                <li class="dropdown">
+                    <a class="dropbtn" class="active">Projetos ▾</a>
+
+                    <ul class="dropdown-content">
+                        <li><a href="projetos-residenciais.html" class="active">Projetos Residenciais</a></li>
+                        <li><a href="projetos-comerciais.html">Projetos Comerciais</a></li>
+                        <li><a href="design-industrial.html">Design Industrial</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="residenciais-container residenciais-dark">
+
+        <h2 class="residenciais-titulo">Projetos Residenciais</h2>
+
+        <div class="residenciais-texto">
+            <p>
+                Um projeto residencial é mais do que organizar espaços — é materializar um modo de viver.
+                Ele representa o diálogo entre estética, funcionalidade e emoção, onde cada traço, cor e textura
+                expressa uma intenção: acolher, inspirar ou proporcionar bem-estar.
+            </p>
+
+            <p>
+                É um exercício de traduzir a identidade humana em forma, luz e proporção. Mais do que técnica,
+                nasce de um olhar sensível sobre a rotina, os hábitos e os sonhos de quem habitará aquele espaço.
+            </p>
+
+            <p>
+                O cliente é o protagonista. Sua história, desejos e emoções moldam cada detalhe. Suas memórias,
+                expectativas e valores guiam o processo criativo, fazendo dele não apenas um contratante, mas
+                um coautor do projeto.
+            </p>
+
+            <p>
+                Assim, cada residência torna-se única — um espaço cheio de significado, identidade e propósito.
+            </p>
+        </div>
+
+        <div class="carousel">
+            <button class="prev" onclick="changeSlide(-1)">❮</button>
+
+            <div class="carousel-images">
+                <img src="img/res1.png" class="active">
+                <img src="img/res2.png">
+                <img src="img/res3.png">
+                <img src="img/res4.png">
+            </div>
+
+            <button class="next" onclick="changeSlide(1)">❯</button>
+        </div>
+
+        <a href="contato.html" class="btn-orcamento">Solicitar Orçamento</a>
+
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".carousel-images img");
+
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove("active");
+
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+
+            slides[currentSlide].classList.add("active");
+        }
+    </script>
+
+<footer class="footer">
+    <h2>Equipe de Desenvolvimento</h2>
+
+    <div class="equipe-container">
+        <div class="equipe-card">
+            <h3>Lucas Moreira</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>João Lucas</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Weslly Santos</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Livio Rocha</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Ashilley Barros</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+
+        <div class="equipe-card">
+            <h3>Waldemar Neto</h3>
+            <p>Estudante de Sistemas para Internet</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

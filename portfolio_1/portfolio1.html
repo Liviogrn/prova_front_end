@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio — Alisson Silva</title>
+  <style>
+    :root{
+      --beige:#d9c7b8;
+      --dark:#333;
+      --muted:#6b655f;
+      --bg:#f7f5f3;
+      --card:#ffffff;
+      --accent:#b89f8a;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--dark);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:32px}
+
+    header.hero{
+      background:linear-gradient(180deg, rgba(217,199,184,0.15), rgba(217,199,184,0));
+      padding:48px 16px;
+      border-radius:12px;
+      margin:16px 0 32px;
+    }
+    .hero h1{font-size:32px;margin:0 0 8px}
+    .hero p.lead{max-width:780px;margin:0;color:var(--muted)}
+
+    .section{background:var(--card);padding:24px;border-radius:10px;margin-bottom:20px;box-shadow:0 4px 18px rgba(0,0,0,0.05)}
+    h2{margin-top:0;color:var(--dark)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .service{padding:14px;border-radius:8px;background:linear-gradient(180deg,#fff,#fbf9f8);border:1px solid rgba(0,0,0,0.03)}
+
+    .project{display:flex;flex-direction:column;gap:8px}
+    .project h3{margin:0;font-size:16px}
+    .project p{margin:0;color:var(--muted)}
+
+    ul.steps{padding-left:18px}
+    .contact p{margin:6px 0}
+
+    blockquote{
+      margin:0;padding:16px;border-left:4px solid var(--accent);background:linear-gradient(90deg,rgba(184,159,138,0.04),transparent);
+      border-radius:6px;color:var(--muted)
+    }
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px}
+
+    .sobre {background: var(--bg); color: var(--dark); padding: 28px; border-radius: 10px; text-align: center;}
+    .sobre p{margin:8px 0}
+    .team{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:10px}
+    .member{background:rgba(255,255,255,0.06);padding:10px 14px;border-radius:8px}
+
+    @media (max-width:520px){.hero h1{font-size:24px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <img src="assets/alissons.png" alt="Foto de Alisson Silva" style="width:100%;max-width:420px;border-radius:10px;margin-bottom:20px;display:block;margin-left:auto;margin-right:auto">
+      <h1>Alisson Silva</h1>
+      <p class="lead">Sou Alisson Silva, formado em Design de Interiores pela Faculdade UNIESP. Apaixonado por transformar espaços em ambientes acolhedores, funcionais e esteticamente equilibrados, desenvolvo projetos prezando sempre pela harmonia, leveza e elegância em cada detalhe.</p>
+      <p class="lead" style="margin-top:12px"><strong>Meu objetivo</strong> é compreender as necessidades e o estilo de vida de cada cliente, criando soluções personalizadas que unem beleza, conforto e funcionalidade.</p>
+      <p style="margin-top:8px;font-weight:600;color:var(--muted)">DESIGNER DE INTERIORES</p>
+    </header>
+
+    <section class="section">
+      <h2>Serviços Oferecidos</h2>
+      <img src="assets/soferecidos.png" alt="Serviços oferecidos" style="width:100%;border-radius:12px;box-shadow: 0 4px 20px rgba(0,0,0,0.10);margin:18px 0 28px;border: 1px solid rgba(0,0,0,0.06);">
+      <div class="grid">
+        <div class="service">Projetos residenciais completos</div>
+        <div class="service">Reformas e readequação de ambientes</div>
+        <div class="service">Consultorias em design de interiores</div>
+        <div class="service">Planejamento de layout e mobiliário</div>
+        <div class="service">Projeto de iluminação</div>
+        <div class="service">Renderização 3D e visualização realista</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Projetos Realizados</h2>
+      <img src="assets/prorealizados.png" alt="Projetos realizados" style="width:100%;border-radius:10px;box-shadow: 0 4px 20px rgba(0,0,0,0.10);margin:10px 0 20px;border: 1px solid rgba(0,0,0,0.06);">
+      <div class="grid">
+        <article class="project">
+          <h3>PROJETO — ESCRITÓRIO</h3>
+          <p>Espaço criado com base no equilíbrio entre estética e conforto. A escolha de materiais neutros e linhas retas reforça o conceito de simplicidade elegante.</p>
+        </article>
+
+        <article class="project">
+          <h3>PROJETO — WC</h3>
+          <p>Banheiro criado em tons neutros, prezando estética, conforto e funcionalidade.</p>
+        </article>
+
+        <article class="project">
+          <h3>PROJETO — ROOFTOP (comercial)</h3>
+          <p>Projeto comercial desenvolvido com o objetivo de criar um ambiente moderno e funcional, com tons neutros e iluminação natural valorizando o espaço.</p>
+        </article>
+
+        <article class="project">
+          <h3>PROJETO — ROOFTOP (stand de vendas)</h3>
+          <p>Stand de vendas desenvolvido para divulgação de uma marca em um espaço público, pensado para atrair e acomodar o público-alvo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Processo Criativo</h2>
+      <img src="assets/criativo.png" alt="Processo Criativo" style="width:100%;max-width:420px;border-radius:10px;margin-bottom:20px;display:block;margin-left:auto;margin-right:auto">
+      <p>Meu processo de criação passa por etapas que garantem qualidade e alinhamento com o cliente:</p>
+      <ol class="steps">
+        <li>Briefing detalhado – entendimento das necessidades e preferências.</li>
+        <li>Pesquisa de referências – moodboards e paletas de cores.</li>
+        <li>Estudo de layout – funcionalidade e fluxo do espaço.</li>
+        <li>Desenvolvimento do projeto 3D – renders e visualização realista.</li>
+        <li>Entrega final e acompanhamento – ajustes e recomendações de execução.</li>
+      </ol>
+    </section>
+
+    <section class="section contact">
+      <h2>Contato</h2>
+      <p>📞 WhatsApp: <a href="https://wa.me/5583981801579" target="_blank" rel="noopener" style="color:var(--dark);text-decoration:none">(83) 98180-1579</a></p>
+      <p>📧 E-mail: <a href="mailto:alissonsilvamr@gmail.com" style="color:var(--dark);text-decoration:none">alissonsilvamr@gmail.com</a></p>
+      <p style="margin-top:10px;font-weight:600">Alisson Silva — DESIGNER DE INTERIORES</p>
+    </section>
+
+    <section class="section">
+      <h2>Estilo e Filosofia</h2>
+      <img src="assets/estilo.png" alt="Estilo e Filosofia" style="width:100%;max-width:420px;border-radius:10px;margin-bottom:20px;display:block;margin-left:auto;margin-right:auto">
+      <p>Meu trabalho busca traduzir essa ideia: <strong>menos é mais</strong>. Cada projeto é pensado para transmitir serenidade, funcionalidade e autenticidade — sem excessos, mas com significado.</p>
+      <blockquote>
+        “A simplicidade é o último grau da sofisticação.” — Leonardo da Vinci
+      </blockquote>
+    </section>
+
+    <section class="sobre">
+      <h2>Sobre Nós — Desenvolvedores do Site</h2>
+      <p>Este site foi desenvolvido pelos alunos do curso de Sistemas para Internet como parte de um projeto acadêmico. Nosso objetivo foi reproduzir integralmente o conteúdo do portfólio em formato web, com atenção à tipografia, hierarquia e leitura clara.</p>
+      <div class="team" aria-label="Equipe de desenvolvimento">
+        <div class="member">Weslly Santos</div>
+        <div class="member">Lucas Moreira</div>
+        <div class="member">João Lucas</div>
+        <div class="member">Lívio Rocha</div>
+        <div class="member">Waldemar Neto</div>
+        <div class="member">Ashilley Barros</div>
+      </div>
+    </section>
+
+    <footer>
+      Desenvolvido por alunos do curso de Sistemas para Internet.
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quem Sou - Rafael Frade</title>
+
+<style>
+    * { box-sizing: border-box; }
+    img, video, iframe { max-width: 100%; height: auto; display: block; }
+    html, body { margin: 0; padding: 0; }
+    .site-wrap, .wrap, .wrapper, .container, main { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    @media (min-width: 600px) { .site-wrap, .wrap, .wrapper, .container, main { padding: 0 24px; } }
+
+    body{
+        margin:0;
+        font-family:'Montserrat', sans-serif;
+        background:#f8f4ef;
+    }
+
+    .section{
+        display:grid;
+        grid-template-columns: 1fr 550px 260px;
+        min-height:100vh;
+        position:relative;
+        max-width:1400px;
+        margin:auto;
+    }
+
+    .texto{
+        padding:100px 60px;
+    }
+
+    .texto h1{
+        font-size:50px;
+        font-weight:600;
+        margin-bottom:35px;
+        letter-spacing:2px;
+    }
+
+    .texto p{
+        font-size:18px;
+        line-height:1.7;
+        max-width:520px;
+    }
+
+    .foto{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding-top:50px;
+    }
+
+    .foto img{
+        width:100%;
+        height:650px;
+        object-fit:cover;
+        box-shadow:0 10px 20px rgba(0,0,0,0.18);
+    }
+
+    .quad-top{
+        width:100%;
+        height:260px;
+        background:#bfbfbf;
+        margin-top:0;
+    }
+
+    .quad-bottom{
+        width:100%;
+        height:300px;
+        background:#7c8185;
+        margin-top:40px;
+    }
+
+    .barra{
+        width:100%;
+        height:120px;
+        background:#bfbfbf;
+        margin-top:40px;
+    }
+
+    @media(max-width:1000px){
+        .section{
+            grid-template-columns:1fr;
+            padding:20px;
+        }
+
+        .foto img{
+            height:400px;
+        }
+
+        .quad-top,
+        .quad-bottom,
+        .barra{
+            display:none;
+        }
+    }
+
+</style>
+
+</head>
+<body>
+
+<div class="section">
+
+    <div class="texto">
+        <h1>QUEM SOU</h1>
+
+        <p>
+            Sou um designer de 23 anos, natural de São Paulo e residente na Paraíba há sete anos,
+            onde desenvolvi minha trajetória profissional e descobri minha verdadeira vocação.
+            Encontrei no design uma forma de transformar ideias, sentimentos e expectativas
+            em soluções visuais e funcionais. Tenho como principal motivação a capacidade
+            de materializar sonhos e necessidades, criando projetos que conectam pessoas,
+            propósito e estética de forma estratégica e significativa.
+        </p>
+    </div>
+
+    <div class="foto">
+        <img src="assets/rafael-04.JPEG" alt="Rafael Frade">
+    </div>
+
+    <div>
+        <div class="quad-top"></div>
+        <div class="quad-bottom"></div>
+    </div>
+
+</div>
+
+<div class="barra"></div>
+
+</body>
+</html>
+
+
+
+
